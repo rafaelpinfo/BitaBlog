@@ -1,0 +1,11 @@
+Source code of my personal blog http://rafaelp.info in Django.
+
+Some features:
+
+* Disqus comments
+* Bootstrap with the clean bootswatch theme http://bootswatch.com/cerulean/
+* Sitemaps
+* Feeds
+* TinyMce
+* Google-prettify (highlight your code)
+
