@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}{{ site_name }}{% endblock %}</title>
+	
+	<!-- now bootstrap -->
+	<link rel="stylesheet" href="/site_media/css/bootstrap/bootstrap.css" />
+	
+	<link rel="stylesheet" href="/site_media/css/prettify/prettify.css" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/site_media/js/prettify/prettify.js"></script>
+	
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+		 	prettyPrint();
+	    });
+	</script>
+
+	{% load analytics %}	 
+	 
+	 <style>
+	 body {
+	 	padding-top: 60px; /* room for fixed nav-bar */
+	 }
+	 </style>
+ 
+</head>
+<body>
+			
+			{% block menu %}
+				{% include "base/menu.html" %}
+			{% endblock %}
+			
+			<div class="container main_container">
+				{% block content %}
+				{% endblock %}
+			<hr>
+			{% block footer %}
+				{% include "base/footer.html" %}
+			{% endblock %}
+			</div> <!-- /container -->
+			
+	{% analytics %}
+</body>
+</html>

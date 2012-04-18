@@ -1,0 +1,20 @@
+<div class="span9">
+	<ul>
+		{% for entry in entry_list %}
+		<li>
+			<h3>
+				<a href="{{ entry.get_absolute_url }}">{{ entry.title }}</a>
+			</h3>
+			<p>
+				<i>written on {{ entry.published|date:"l, F jS, Y @ g:i A" }}</i>
+			</p>
+		</li> {% endfor %}
+	</ul>
+	{% include "base/pagination.html"%}
+
+</div>
+
+
+
+
+

@@ -1,0 +1,15 @@
+<div class="span3">
+	<div class="well sidebar-nav">
+	            <ul class="nav nav-list">
+	              <li class="nav-header">Categories</li>
+		              {% for category in categories %}
+		     			 {% ifequal category.slug slug %}
+			             	<li class="active"><a href="{{ category.get_absolute_url }}">{{ category.name }}</a></li>
+			             {% else %}
+			              	<li><a href="{{ category.get_absolute_url }}">{{ category.name }}</a></li>
+						 {% endifequal %}
+			              	
+		              {% endfor %}
+	            </ul>
+	</div>
+</div>

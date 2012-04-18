@@ -1,0 +1,12 @@
+{% extends "base/base_index.html" %}
+
+{% block content %}
+
+<div class="row">
+	{% include "spec/entries.html" %}
+	{% if not hide_categories %}
+		{% include "spec/sidebar.html" %}
+	{% endif %}
+</div>
+{% endblock %}
+

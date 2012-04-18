@@ -1,0 +1,16 @@
+{% extends "base/base_index.html" %}
+
+{%block title %} {{ site_name}} - {{entry.title}} {% endblock%}
+
+
+{% block content %}
+	<h2>{{ entry.title }}</h2>
+	<p><i>written on {{ entry.published|date:"l, F jS, Y @ g:i A" }}</i></p>
+	<div class="row">
+		<div class="span12">
+			{{ entry.content|safe}}
+		</div>
+	</div>
+	{% include "base/comments.html"%}
+	
+{% endblock %}

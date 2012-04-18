@@ -1,0 +1,12 @@
+{% extends "base/base_index.html" %}
+
+{%block title%}Archives{% endblock %}
+
+{% block content %}  
+	<h2>Blog: Archives</h2>  
+		<ul>  
+			{% for date in date_list %}  
+        		<li><a href="/{{ date|date:"Y"|lower }}">{{ date|date:"Y" }}</a></li>  
+			{% endfor %}  
+		</ul>  
+{% endblock %}
